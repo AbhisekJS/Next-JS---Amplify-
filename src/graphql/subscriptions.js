@@ -1,9 +1,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreatePark = /* GraphQL */ `
-  subscription OnCreatePark {
-    onCreatePark {
+export const onCreateMemories = /* GraphQL */ `
+  subscription OnCreateMemories {
+    onCreateMemories {
       id
       name
       image {
@@ -16,9 +16,9 @@ export const onCreatePark = /* GraphQL */ `
     }
   }
 `;
-export const onUpdatePark = /* GraphQL */ `
-  subscription OnUpdatePark {
-    onUpdatePark {
+export const onUpdateMemories = /* GraphQL */ `
+  subscription OnUpdateMemories {
+    onUpdateMemories {
       id
       name
       image {
@@ -31,9 +31,9 @@ export const onUpdatePark = /* GraphQL */ `
     }
   }
 `;
-export const onDeletePark = /* GraphQL */ `
-  subscription OnDeletePark {
-    onDeletePark {
+export const onDeleteMemories = /* GraphQL */ `
+  subscription OnDeleteMemories {
+    onDeleteMemories {
       id
       name
       image {

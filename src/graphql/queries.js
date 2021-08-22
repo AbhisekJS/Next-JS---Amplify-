@@ -1,9 +1,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getPark = /* GraphQL */ `
-  query GetPark($id: ID!) {
-    getPark(id: $id) {
+export const getMemories = /* GraphQL */ `
+  query GetMemories($id: ID!) {
+    getMemories(id: $id) {
       id
       name
       image {
@@ -16,13 +16,13 @@ export const getPark = /* GraphQL */ `
     }
   }
 `;
-export const listParks = /* GraphQL */ `
-  query ListParks(
-    $filter: ModelParkFilterInput
+export const listMemories = /* GraphQL */ `
+  query ListMemories(
+    $filter: ModelMemoriesFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listParks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listMemories(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name

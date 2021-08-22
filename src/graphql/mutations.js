@@ -1,12 +1,12 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createPark = /* GraphQL */ `
-  mutation CreatePark(
-    $input: CreateParkInput!
-    $condition: ModelParkConditionInput
+export const createMemories = /* GraphQL */ `
+  mutation CreateMemories(
+    $input: CreateMemoriesInput!
+    $condition: ModelMemoriesConditionInput
   ) {
-    createPark(input: $input, condition: $condition) {
+    createMemories(input: $input, condition: $condition) {
       id
       name
       image {
@@ -19,12 +19,12 @@ export const createPark = /* GraphQL */ `
     }
   }
 `;
-export const updatePark = /* GraphQL */ `
-  mutation UpdatePark(
-    $input: UpdateParkInput!
-    $condition: ModelParkConditionInput
+export const updateMemories = /* GraphQL */ `
+  mutation UpdateMemories(
+    $input: UpdateMemoriesInput!
+    $condition: ModelMemoriesConditionInput
   ) {
-    updatePark(input: $input, condition: $condition) {
+    updateMemories(input: $input, condition: $condition) {
       id
       name
       image {
@@ -37,12 +37,12 @@ export const updatePark = /* GraphQL */ `
     }
   }
 `;
-export const deletePark = /* GraphQL */ `
-  mutation DeletePark(
-    $input: DeleteParkInput!
-    $condition: ModelParkConditionInput
+export const deleteMemories = /* GraphQL */ `
+  mutation DeleteMemories(
+    $input: DeleteMemoriesInput!
+    $condition: ModelMemoriesConditionInput
   ) {
-    deletePark(input: $input, condition: $condition) {
+    deleteMemories(input: $input, condition: $condition) {
       id
       name
       image {

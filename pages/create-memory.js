@@ -2,26 +2,26 @@ import { useState } from 'react'
 import { API, Storage } from 'aws-amplify'
 import { withAuthenticator } from '@aws-amplify/ui-react'
 
-import { createPark } from '../src/graphql/mutations'
+import { createMemories } from '../src/graphql/mutations'
 import config from '../src/aws-exports'
 import { useRouter } from 'next/dist/client/router'
 import { Button, Container, Paper, Snackbar, TextField, Typography } from '@material-ui/core'
 
 
 
-function CreatePark () {
+function CreateMemory () {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const router = useRouter()
 
-  const handleSubmit = async e => {
+  const handleSubmit = async(e) => {
     e.preventDefault()
     // upload the image to S3
     const uploadedImage = await Storage.put(image.name, image)
     console.log(uploadedImage)
     // submit the GraphQL query 
-    const newPark = await API.graphql({
-      query: createPark,
+    const newMemory = await API.graphql({
+      query: createMemories,
       variables: {
         input: {
           name,
@@ -34,7 +34,7 @@ function CreatePark () {
         }
       }
     })
-    console.log(newPark)
+    console.log(newMemory)
     router.push('/')
 
   }
@@ -50,7 +50,7 @@ function CreatePark () {
       <TextField type='text' label="title" variant="outlined" fullWidth onChange={e => setName(e.target.value)} />
       <label htmlFor='image'>Image</label>
       <input style={{'margin':'1rem 0'}}type='file' id='image' onChange={e => setImage(e.target.files[0])} />
-      <Button variant="contained" color="secondary" size="small" fullWidth>Submit</Button>
+      <Button variant="contained" color="secondary" size="small" type="submit" fullWidth>Submit</Button>
     </form>
     </Paper>
     </Container>
@@ -60,4 +60,4 @@ function CreatePark () {
   )
 }
 
-export default withAuthenticator(CreatePark)
+export default withAuthenticator(CreateMemory)
